@@ -14,6 +14,13 @@ body {
 
 h1 {
     font-family: cursive;
+    text-align: center;
+}
+
+img {
+    width: 120px;
+    border-radius: 50%;
+    margin: 20px 0 ;
 }
 
 button {
@@ -23,6 +30,7 @@ button {
     border-radius: 5px;
     border: 2px solid lightcoral;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .overlay {
