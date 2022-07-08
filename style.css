@@ -57,7 +57,8 @@ button:active {
     border-radius: 10px;
     width:80%;
     max-width: 350px;
-    height: 200px;
+    height: auto;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;

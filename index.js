@@ -1,7 +1,8 @@
 //random jokes application generating random jokes anytime anything is clicked on
 // fetching random jokes from chuck norris api
 
-const randomJokeBtn = document.getElementById('random-joke-button');
+const randomJokeBtnC = document.getElementById('random-joke-buttonC');
+const randomJokeBtnD = document.getElementById('random-joke-buttonD');
 const closeJoke = document.querySelector('#closeJoke')
 const randomJokeContainer = document.getElementById('joke-containerJ');
 const overlay = document.querySelector('.overlay');
@@ -58,6 +59,19 @@ const laughAudio = new Audio();
 
 
 //open joke on click of the randomJokeButton 
+randomJokeBtnC.addEventListener('click', async () => {
+
+    laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
+
+    let joke = await fetchJoke();
+
+    randomJokeContainer.innerHTML = `<h6>${joke}</h6>`;
+    overlay.style.display = 'flex';
+
+    setTimeout(laughAudio.play(), 1000);
+});
+
+
 randomJokeBtn.addEventListener('click', async () => {
 
     laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
@@ -69,6 +83,7 @@ randomJokeBtn.addEventListener('click', async () => {
 
     setTimeout(laughAudio.play(), 1000);
 });
+
 
 //close the joke on click of the button.
 closeJoke.addEventListener('click', () => {
