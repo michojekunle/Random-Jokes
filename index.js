@@ -72,10 +72,9 @@ randomJokeBtnC.addEventListener('click', async () => {
     randomJokeContainer.style.backgroundColor = '#fff';
     randomJokeContainer.style.color = 'lightcoral';
     randomJokeContainer.style.borderColor = 'lightcoral';
-    randomJokeContainer.style.transform = 'translateX(0px)';
 
     closeJoke.style.borderColor = 'lightcoral';
-    overlay.style.backgroundImage = 'url(./images/background.jpg)';
+    overlay.style.backgroundImage = 'url(./images/bg1.jpg)';
 
     setTimeout(laughAudio.play(), 1000);
 });
@@ -92,12 +91,9 @@ randomJokeBtnD.addEventListener('click', async () => {
     randomJokeContainer.style.backgroundColor = '#aaa';
     randomJokeContainer.style.color = '#fff';
     randomJokeContainer.style.borderColor = '#000';
-    randomJokeContainer.style.transform = 'translateX(80px)';
 
     closeJoke.style.borderColor = '#000';
-    overlay.style.backgroundImage = 'url(./images/BG_DADJjpg.jpg)';
-    overlay.style.backgroundRepeat = 'no-repeat';
-    overlay.style.backgroundSize = '100% 100%';
+    overlay.style.backgroundImage = 'url(./images/bg2.jpg)';
 
     setTimeout(laughAudio.play(), 1000);
 });
