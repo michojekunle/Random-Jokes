@@ -64,3 +64,10 @@ button:active {
     text-align: center;
     font-size: 1.5rem;
 }
+
+#random-joke-buttonD {
+    background-color: rgb(51, 49, 49);
+    color: #fff;
+    margin-left: 30px;
+    border-color: black;
+}
