@@ -9,6 +9,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 button {
@@ -49,7 +50,7 @@ button:active {
 
 .joke-containerJ {
     z-index: 5;
-    background: #fff;
+    background: #ffffff;
     color: lightcoral;
     box-shadow: 0 0 4px 6px rgba(196, 193, 193, .2);
     border: 2px solid lightcoral;
