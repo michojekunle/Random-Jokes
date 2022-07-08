@@ -3,6 +3,7 @@
 
 const randomJokeBtnC = document.getElementById('random-joke-buttonC');
 const randomJokeBtnD = document.getElementById('random-joke-buttonD');
+
 const closeJoke = document.querySelector('#closeJoke')
 const randomJokeContainer = document.getElementById('joke-containerJ');
 const overlay = document.querySelector('.overlay');
@@ -72,7 +73,7 @@ randomJokeBtnC.addEventListener('click', async () => {
 });
 
 
-randomJokeBtn.addEventListener('click', async () => {
+randomJokeBtnD.addEventListener('click', async () => {
 
     laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
 
@@ -80,6 +81,12 @@ randomJokeBtn.addEventListener('click', async () => {
 
     randomJokeContainer.innerHTML = `<h6>${joke}</h6>`;
     overlay.style.display = 'flex';
+    randomJokeContainer.style.backgroundColor = '#aaa';
+    randomJokeContainer.style.color = '#fff';
+    randomJokeContainer.style.borderColor = '#000';
+    closeJoke.style.borderColor = '#000';
+    overlay.style.backgroundImage = 'url(./)'
+
 
     setTimeout(laughAudio.play(), 1000);
 });
