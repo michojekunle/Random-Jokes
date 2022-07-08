@@ -17,6 +17,22 @@ async function fetchJoke() {
     return data.value;
 };
 
+
+async function fetchDadJoke() {
+    const res = await fetch('https://icanhazdadjoke.com/', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    
+    const data = await res.json();
+    
+    console.log(data.joke);
+
+    return data.joke;
+};
+
+
 const laughArray = [
     './audio/baby-laughing.mp3',
     './audio/Comedy-sound-effects-of-nigeria-funny-the-world-of-nigee-things.mp3',
@@ -45,8 +61,8 @@ const laughAudio = new Audio();
 randomJokeBtn.addEventListener('click', async () => {
 
     laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
-    
-    let joke = await fetchJoke();
+
+    let joke = await fetchDadJoke();
 
     randomJokeContainer.innerHTML = `<h6>${joke}</h6>`;
     overlay.style.display = 'flex';

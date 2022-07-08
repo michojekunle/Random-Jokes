@@ -43,6 +43,10 @@ button {
     padding: 2px 12px;
 }
 
+button:active {
+    transform: scale(0.9);
+}
+
 .joke-containerJ {
     z-index: 5;
     background: #fff;
