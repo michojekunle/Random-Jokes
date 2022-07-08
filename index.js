@@ -40,11 +40,12 @@ clickAudio.src = './mixkit-gun-click-1123.wav';
 
 const laughAudio = new Audio();
 
-laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
 
 //open joke on click of the randomJokeButton 
 randomJokeBtn.addEventListener('click', async () => {
 
+    laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
+    
     let joke = await fetchJoke();
 
     randomJokeContainer.innerHTML = `<h6>${joke}</h6>`;
@@ -56,6 +57,6 @@ randomJokeBtn.addEventListener('click', async () => {
 //close the joke on click of the button.
 closeJoke.addEventListener('click', () => {
     overlay.style.display = 'none';
-    
+
     laughAudio.pause();
 });
