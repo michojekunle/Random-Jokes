@@ -60,11 +60,11 @@ const laughAudio = new Audio();
 
 
 //open joke on click of the randomJokeButton 
-randomJokeBtnC.addEventListener('click', async () => {
+randomJokeBtnC.addEventListener('click', () => {
 
     laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
 
-    let joke = await fetchJoke();
+    let joke = fetchJoke();
 
     randomJokeContainer.innerHTML = `<h6>${joke}</h6>`;
     overlay.style.display = 'flex';
