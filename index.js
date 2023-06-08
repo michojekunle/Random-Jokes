@@ -83,6 +83,7 @@ randomJokeBtnC.addEventListener('click', async () => {
 randomJokeBtnD.addEventListener('click', async () => {
 
     laughAudio.src = laughArray[Math.floor(Math.random()*laughArray.length)];
+    laughAudio.loop = true;
 
     let joke = await fetchDadJoke();
 
